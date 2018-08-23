@@ -1,0 +1,8 @@
+[[constraint]]
+  name = "github.com/go-redis/redis"
+  version = "6.14.0"
+
+
+[prune]
+  go-tests = true
+  unused-packages = true
