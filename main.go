@@ -16,7 +16,7 @@ func main() {
 	http.ListenAndServe(":8080", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		key := r.FormValue("key")
 		if len(key) == 0 {
-			w.WriteHeader(http.StatusBadRequest)
+			w.WriteHeader(http.StatusOK)
 			if _, err := w.Write([]byte("missing 'key' parameter")); err != nil {
 				log.Println("error writing response: ", err)
 			}
